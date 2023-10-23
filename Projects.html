@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styling.css">
+        <link rel="stylesheet" href="javaScript.js">
+        <title>Projects</title>
+    </head>
+    <body onload="arrayForTable()">
+        <script src="./javaScript.js"></script>
+
+        <header>
+            <h1 id="header">My portfolio &nbsp;<button id="lightmodee" title="Toggle Light/Dark mode" type = button onclick= "lightMode()">LIGHT MODE</button></h1>
+        </header>
+
+        <main>
+            <div class="grid-containerB">
+                <div class="grid-item-extraOne"></div>
+                <div class="grid-item-extraTwo"></div>
+                <div class="grid-item-aA">
+                    <nav class="navbar">
+                        <ul>
+                            <li><a href="Main.html" target="_self" title="Main Page">Main</a></li>
+                            <li><a href="Projects.html" target="_self" title="Projects">Projects</a></li>
+                        </ul>
+                    </nav>
+
+                    <h3 id="first">List of previous game projects:</h3>
+    
+                    <ul id="gameListing">
+                        <li>Spooky Ice Fishing Game</li>
+                        <li>Six Worlds</li>
+                        <li>Dearest Em</li>
+                    </ul>
+
+                    <table id="output"></table>
+
+                    <form id="gameSelection">
+                        <label for="game">Select a game for more information or scroll down to read more about them.</label>
+                        <select id="game" name="game" onchange="updateGameInfo(this.value); return false;">
+                            <option value="Spooky Ice Fishing Game is a small indie horror game.
+                            
+            The game description: 
+            It's a cold winter's night. The only light you have is a flashlight.
+            Mysterious things lurk under the frost covered lake where you must catch one legendary fish.                 
+            However, something else is out there.             
+            Don't let them catch you.">Spooky</option>
+                            <option value="Six Worlds is a game made for GMTKJAM2022 with the theme of 'Roll of the Dice' with hand painted graphics and original tunes.
+            
+            The game description: 
+            Henry the Alien has a problem: his spaceship just exploded, leaving him stranded on a strange planet in the shape of a six-sided dice.
+            Guide Henry through the six sides of the planet to find and collect the missing parts of his ride back home!">Six</option>
+                            <option value="jaja">Em</option>
+                        </select>
+            
+                        <input id="displayInfo" type="button" value="Display Information" onclick="displaySelectedGame(this.form); return false;"/>
+                        <script>
+                            var x = document.getElementById("displayInfo");
+                            x.addEventListener("click", displayThankYouMsg);
+                        </script>
+                    </form>
+                </div>
+
+                <div class="gameContainer">
+                    <div class="gameChild">
+                        <div id="gTitle">Spooky Ice Fishing Game</div>
+                        <div id="gScreenshot">
+                            <img src="sifg1.png" alt="Picture could not be loaded.">
+                        </div>
+                        <div id="gScreenshot">
+                            <img src="sifg2.png" alt="Picture could not be loaded.">
+                        </div>
+                        <div id="gDescription">It's a cold winter's night. The only light you have is a flashlight.
+
+                            Mysterious things lurk under the frost covered lake where you must catch one legendary fish. 
+                            
+                            However, something else is out there. 
+                            
+                            Don't let them catch you.
+                        </div>
+                        <div id="gVideo">
+                            <video width="512" height="288" controls>
+                                <source src="Spooky Ice Fishing Demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gameContainer">
+                    <div class="gameChild">
+                        <div id="gTitle">Six Worlds</div>
+                        <div id="gScreenshot"><img src="sw1.png" alt="rip"></div>
+                        <div id="gScreenshot"><img src="sw2.png" alt="rip"></div>
+                        <div id="gDescription">Henry the Alien has a problem: 
+                            his spaceship just exploded, leaving him stranded on a strange planet in the shape of a six-sided dice.
+                            Guide Henry through the six sides of the planet to find and collect the missing parts of his ride back home!</div>
+                        <div id="gVideo">
+                            <video width="512" height="288" controls>
+                                <source src="Six Worlds Demo.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div>Contact info: &nbsp;&nbsp;&nbsp; Email - <a href="mailto:t2tadi00@students.oamk.fi">t2tadi00@students.oamk.fi</a> &nbsp;&nbsp;&nbsp; Phone - 0452222988</div>
+        </footer>
+    </body>
+</html>

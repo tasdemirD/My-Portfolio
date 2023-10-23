@@ -1,0 +1,257 @@
+body {
+    background-color: rgb(1, 10, 26);
+    color: white;
+    font-size: larger;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+}
+
+#header{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(215, 215, 215);
+    padding: 2px;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+    overflow: hidden;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding: 7px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    color: rgb(0, 76, 255);
+}
+
+.navbar li{
+    float: center;
+}
+
+#mainPic{
+    color: black;
+    animation-name: slideDown;
+    animation-duration: 1.7s;
+}
+
+@keyframes slideDown{
+    from{transform: translateY(300%);}
+}
+
+@keyframes glowing{
+    50%{box-shadow: 0px 0px 50px rgb(0, 76, 255);}
+}
+
+#gameListing{
+    list-style-type: none;          /* removes listing dots */
+    padding: 20px;
+}
+
+.lightMode{
+    background-color: white;
+    color: black;
+}
+
+#lightmodee{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#gameTable, #output{
+    border-color: aliceblue;
+    border: 1px solid;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+img {
+    max-width: 75%;
+    height: auto;
+}
+
+video {
+    max-width: 75%;
+    height: auto;
+    padding: 7px;
+}
+
+/* MAIN PAGE */
+.grid-container {
+    display: grid;
+    background-color: inherit;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.grid-item-a{
+    background-color: inherit;
+    color: inherit;
+    align-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.grid-item-b{
+    background-color: inherit;
+    color: inherit;
+    padding: 40px 20px 0px 20px;
+    font-size: 30px;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+
+.grid-item-c{
+    background-color: inherit;
+    color: inherit;
+    align-self: center;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    font-size: 40px;
+}
+
+/* PROJECTS PAGE */
+.grid-containerB{
+    height: 100%;
+    display: grid;
+    background-color: inherit;
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+}
+
+.grid-item-extraOne{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url("sifgBR.png");
+
+}
+
+.grid-item-aA{
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    animation-name: glowing;
+    animation-duration: 1.7s;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: white;
+}
+
+.grid-item-extraTwo{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-image: url("sifgBR.png");
+}
+
+.gameContainer{
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    border-color: white;
+}
+
+.gameChild{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+}
+
+#gTitle, #gVideo, #gDescription{
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#gScreenshot{
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+}
+
+#gTitle{
+    font-size: 40px;
+    padding: 40px;
+    border-top: 7px solid;
+    border-color: inherit;
+    margin: 0 -2em;
+}
+
+#gDescription{
+    padding: 40px 15px 40px 15px;
+
+}
+
+#gVideo{
+    padding: 40px 0px 40px 0px;
+}
+
+#link{
+    background-color: aliceblue;
+    font-size: 13px;
+    padding: 5px;
+    border: 2px;
+    border-color: black;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: rgb(255, 145, 0);
+}
+
+#link{
+    color: rgb(242, 0, 255);
+}
+
+#footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    text-align: center;
+    float: bottom;
+}
+
+#first{
+    padding: 15px;
+}
+
+#gameSelection{
+    padding: 20px;
+}
